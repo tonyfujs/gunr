@@ -15,7 +15,7 @@
 h_bullet <- function(df) {
   df$label <- paste0(df$measure, '\n', df$units)
   p <- ggplot(df, aes(x = label)) +
-    #coord_flip() +
+    coord_flip() +
     geom_bar(aes(y = high), fill = "#E0E0E0", stat = "identity") +
     geom_bar(aes(y = mean), fill = "#C8C8C8", stat = "identity") +
     geom_bar(aes(y = low), fill = "#989898", stat = "identity") +
